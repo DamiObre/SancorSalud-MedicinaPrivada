@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Prevención Salud - Medicina Prepaga</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#3d5f90",
+                        "tertiary-container": "#747575",
+                        "surface-dim": "#dcd9d9",
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#e4e2e1",
+                        "on-surface-variant": "#5a3f48",
+                        "outline": "#8e6f78",
+                        "on-surface": "#1b1c1c",
+                        "secondary-fixed": "#d5e3ff",
+                        "inverse-on-surface": "#f3f0f0",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-container": "#fdfdfd",
+                        "secondary-container": "#a6c8ff",
+                        "on-secondary-container": "#305383",
+                        "primary-fixed": "#ffd9e3",
+                        "on-primary-container": "#fffdff",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#e3007e",
+                        "deep-navy": "#002F5D",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "on-secondary-fixed-variant": "#234776",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#a6c8ff",
+                        "background": "#fbf9f8",
+                        "on-secondary-fixed": "#001c3b",
+                        "tertiary-fixed": "#e2e2e2",
+                        "primary-fixed-dim": "#ffb0c9",
+                        "on-primary-fixed-variant": "#8e004c",
+                        "inverse-primary": "#ffb0c9",
+                        "surface-container-high": "#eae8e7",
+                        "surface": "#fbf9f8",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed": "#3e001e",
+                        "surface-gray": "#F8F9FA",
+                        "primary": "#b60064",
+                        "surface-bright": "#fbf9f8",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "surface-tint": "#b90066",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-variant": "#e4e2e1",
+                        "surface-container-low": "#f6f3f2",
+                        "on-error": "#ffffff",
+                        "tertiary": "#5b5d5d",
+                        "surface-container": "#f0eded",
+                        "vibrant-magenta": "#E3007E",
+                        "status-red": "#D10000",
+                        "outline-variant": "#e2bdc7",
+                        "inverse-surface": "#303030",
+                        "on-background": "#1b1c1c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "16px",
+                        "base": "4px",
+                        "xl": "32px",
+                        "container-max": "1200px",
+                        "gutter": "24px",
+                        "xs": "4px",
+                        "sm": "8px",
+                        "lg": "24px",
+                        "xxl": "48px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "label-md": ["Montserrat"],
+                        "display-lg": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "button-text": ["Montserrat"],
+                        "body-lg": ["Montserrat"],
+                        "headline-sm": ["Montserrat"],
+                        "display-lg-mobile": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "700"}],
+                        "button-text": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-sm": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Montserrat', sans-serif; background-color: #fbf9f8; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-card { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(8px); }
+        .plan-card:hover { transform: translateY(-8px); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="docked full-width top-0 sticky z-50 bg-surface border-b border-outline-variant shadow-sm h-20 flex items-center">
+<div class="flex justify-between items-center w-full px-lg max-w-container-max mx-auto h-20">
+<div class="flex items-center gap-md">
+<span class="text-headline-md font-headline-md text-primary font-bold">Prevención Salud</span>
+</div>
+<nav class="hidden lg:flex items-center gap-lg">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="https://wa.me/5493624204266">Cartilla Médica</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="https://wa.me/5493624204266">Planes</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="https://wa.me/5493624204266">Atención al afiliado</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="https://wa.me/5493624204266">Institucional</a>
+</nav>
+<div class="flex items-center gap-md">
+<a class="bg-primary text-on-primary px-lg py-sm rounded-full font-button-text text-button-text cursor-pointer active:scale-95 transition-all shadow-md hover:bg-primary-container" href="https://wa.me/5493624204266">
+                    Mi Salud Online
+                </a>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative bg-vibrant-magenta text-white overflow-hidden py-xxl lg:min-h-[500px] flex items-center">
+<div class="absolute inset-0 z-0 opacity-10">
+<div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-white to-transparent transform skew-x-12"></div>
+</div>
+<div class="container max-w-container-max mx-auto px-lg relative z-10 grid grid-cols-1 md:grid-cols-2 gap-lg items-center">
+<div class="space-y-md animate-fade-in-up">
+<h1 class="font-display-lg text-display-lg leading-tight">Preferidos</h1>
+<p class="font-body-lg text-body-lg max-w-xl opacity-90">Sumá un amigo a Prevención Salud y ganá hasta $70.000. Protegé lo que más importa con la red más grande del país.</p>
+<div class="pt-md">
+<a class="inline-block bg-white text-vibrant-magenta font-button-text text-button-text px-xxl py-md rounded-full hover:bg-surface-gray transition-all transform hover:scale-105 shadow-xl" href="https://wa.me/5493624204266">
+                        Conocé más
+                    </a>
+</div>
+</div>
+<div class="hidden md:flex justify-center items-center">
+<div class="relative w-80 h-80 bg-white/20 rounded-full flex items-center justify-center border-4 border-white/30 backdrop-blur-sm animate-pulse">
+<span class="material-symbols-outlined text-[160px] text-white" style="font-variation-settings: 'FILL' 1;">front_hand</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Actions & Profile Selector -->
+<section class="py-xxl -mt-12">
+<div class="container max-w-container-max mx-auto px-lg">
+<div class="flex justify-center mb-xl">
+<div class="bg-surface-container shadow-md rounded-full p-1 flex">
+<button class="px-xl py-base rounded-full font-label-md text-label-md text-on-surface transition-all">Soy Afiliado</button>
+<button class="px-xl py-base rounded-full font-label-md text-label-md bg-white border-2 border-primary text-primary shadow-sm transition-all">No Soy Afiliado</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<a class="flex items-center p-lg bg-surface-container-low border border-outline-variant rounded-xl group hover:shadow-lg transition-all cursor-pointer" href="https://wa.me/5493624204266">
+<div class="bg-primary text-on-primary w-20 h-20 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl">payments</span>
+</div>
+<div class="ml-lg">
+<h3 class="font-headline-sm text-headline-sm text-secondary">Cotizá tu plan</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Encontrá el plan ideal para vos y tu familia con beneficios exclusivos.</p>
+</div>
+<span class="material-symbols-outlined ml-auto text-primary opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</a>
+<a class="flex items-center p-lg bg-surface-container-low border border-outline-variant rounded-xl group hover:shadow-lg transition-all cursor-pointer" href="https://wa.me/5493624204266">
+<div class="bg-primary text-on-primary w-20 h-20 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl">medical_services</span>
+</div>
+<div class="ml-lg">
+<h3 class="font-headline-sm text-headline-sm text-secondary">Conocé nuestra cartilla</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Buscá prestadores, farmacias y centros de atención en todo el país.</p>
+</div>
+<span class="material-symbols-outlined ml-auto text-primary opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Beneficios Bento-ish Grid -->
+<section class="py-xxl bg-surface-container-low">
+<div class="container max-w-container-max mx-auto px-lg">
+<div class="mb-xl">
+<h2 class="font-headline-lg text-headline-lg text-secondary">Beneficios</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Accedé a beneficios exclusivos diseñados para potenciar tu bienestar.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="bg-primary p-lg rounded-xl flex flex-col justify-between min-h-[250px] shadow-lg group">
+<div>
+<div class="flex justify-between items-start">
+<h3 class="font-headline-sm text-headline-sm text-white">Preferidos</h3>
+<span class="material-symbols-outlined text-white/50 text-5xl">diversity_3</span>
+</div>
+<p class="font-body-md text-body-md text-white/90 mt-sm">Programa de referidos con recompensas para vos y tus amigos.</p>
+</div>
+<a class="bg-white/20 text-white border border-white/40 px-lg py-sm rounded-full w-fit hover:bg-white hover:text-primary transition-all text-sm font-bold" href="https://wa.me/5493624204266">Ver más</a>
+</div>
+<div class="bg-secondary p-lg rounded-xl flex flex-col justify-between min-h-[250px] shadow-lg group">
+<div>
+<div class="flex justify-between items-start">
+<h3 class="font-headline-sm text-headline-sm text-white">Beneficia</h3>
+<span class="material-symbols-outlined text-white/50 text-5xl">featured_seasonal_and_gifts</span>
+</div>
+<p class="font-body-md text-body-md text-white/90 mt-sm">Descuentos exclusivos en locales adheridos de todo el país.</p>
+</div>
+<a class="bg-white/20 text-white border border-white/40 px-lg py-sm rounded-full w-fit hover:bg-white hover:text-secondary transition-all text-sm font-bold" href="https://wa.me/5493624204266">Ver más</a>
+</div>
+<div class="bg-primary p-lg rounded-xl flex flex-col justify-between min-h-[250px] shadow-lg group">
+<div>
+<div class="flex justify-between items-start">
+<h3 class="font-headline-sm text-headline-sm text-white">Óptica Digital</h3>
+<span class="material-symbols-outlined text-white/50 text-5xl">visibility</span>
+</div>
+<p class="font-body-md text-body-md text-white/90 mt-sm">Comprá tus lentes con descuentos y envío directo a tu hogar.</p>
+</div>
+<a class="bg-white/20 text-white border border-white/40 px-lg py-sm rounded-full w-fit hover:bg-white hover:text-primary transition-all text-sm font-bold" href="https://wa.me/5493624204266">Ver más</a>
+</div>
+</div>
+<div class="mt-xl text-center">
+<a class="inline-block border-2 border-primary text-primary px-xxl py-sm rounded-full hover:bg-primary hover:text-white transition-all font-bold" href="https://wa.me/5493624204266">Ver todos los beneficios</a>
+</div>
+</div>
+</section>
+<!-- Programas Preventivos -->
+<section class="py-xxl">
+<div class="container max-w-container-max mx-auto px-lg">
+<div class="mb-xl text-center md:text-left">
+<h2 class="font-headline-lg text-headline-lg text-secondary">Programas Preventivos de Salud y Bienestar</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">Cuidamos tu salud en cada etapa de la vida con programas enfocados en la calidad de vida.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Program 1 -->
+<div class="bg-white rounded-2xl overflow-hidden shadow-md flex flex-col group border border-outline-variant">
+<div class="h-56 overflow-hidden relative">
+<img alt="App Mi Prevención" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/ADBb0uiT0-qco9iakRFHUfvZNeUT9WRB3WMsPsGiDRHnqeKG-Mt3p3LFkmpocldVnbiNtUocLtAOWt0QwN7F87m_acMFsGFGccRRnOadtlZXJ7KDNy2uN1lniTB2cO5ITtWNZDshMXqDe7YDH3ee1ePPorJwk-y09sIJDW2U9pp5ccN8z1U0UoKqH2ivXW1Pvu03ZRPJNZZGqXPm0YGBjw3SK7xscIZQGTu5lUpUIicx6MqudgakUr1wGnL5CHU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<span class="absolute bottom-4 left-4 bg-primary text-white text-xs font-bold px-sm py-1 rounded">PLATAFORMA DIGITAL</span>
+</div>
+<div class="p-lg flex-grow flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-secondary mb-sm uppercase tracking-tight">App Mi Prevención</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">Tu bienestar integral al alcance de tu mano. Gestioná turnos, recetas y telemedicina desde un solo lugar.</p>
+<a class="mt-md text-primary font-bold flex items-center gap-base hover:gap-md transition-all" href="https://wa.me/5493624204266">
+                            Ver detalles <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Program 2 -->
+<div class="bg-white rounded-2xl overflow-hidden shadow-md flex flex-col group border border-outline-variant">
+<div class="h-56 overflow-hidden relative">
+<img alt="Donación Sangre" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/ADBb0uh_IC1nJ_IXVhp1q3ZgTsJmeuuzlbpA4Pk4yqIOJTXG8kNGs1dB9eoykb4Yw1mQrNauNiJK0Knd6ZzBc5QEnzl7a4FQQPN2BY1ht1g5jSB4-M5cNCGVVKiZiQhqvD341saHHo-VllrNY6N9sddyqZjOcOV-Ck-76towsSXOeIPmwvGONvF1AeKg3eP8F3vIZzkN6cyY80WKJ36jZ3Hh7xKQToYtUNHcUfQ-zi0L2kohtp-2RoD0NnBlEaIq"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<span class="absolute bottom-4 left-4 bg-status-red text-white text-xs font-bold px-sm py-1 rounded">CAUSA SOCIAL</span>
+</div>
+<div class="p-lg flex-grow flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-secondary mb-sm uppercase tracking-tight">Donación de Sangre</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">Fomentamos la donación voluntaria de sangre y médula ósea. Tu decisión salva vidas hoy.</p>
+<a class="mt-md text-primary font-bold flex items-center gap-base hover:gap-md transition-all" href="https://wa.me/5493624204266">
+                            Sumate ahora <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Program 3 -->
+<div class="bg-white rounded-2xl overflow-hidden shadow-md flex flex-col group border border-outline-variant">
+<div class="h-56 overflow-hidden relative">
+<img alt="Prevención Cáncer" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/ADBb0uhxX5bJU_oB3JNQ0O2NetbXulPmP9BxdMJBpQjjWr1KlhZJR4B3bPbY7rw9a9AV6SG6ExHcLXtIq2PwaREf_G9tJEpa3fS4RLpzHrp4wuVvEPUos__5tn4g1n8piTlbDwz0WRqgOUqNL7EbNlcQ8ABOEI0JSGy-mXPIfOQEw183eXv1KzWJqsOX3oCoiNLdKhVOmtM71iF-wqG5FDAGQFm4O2HdLSNeWVQX41y-30mqApcweFuhja7a_twH"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<span class="absolute bottom-4 left-4 bg-vibrant-magenta text-white text-xs font-bold px-sm py-1 rounded">PREVENCIÓN</span>
+</div>
+<div class="p-lg flex-grow flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-secondary mb-sm uppercase tracking-tight">Control de Mama</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">Programas de detección temprana para cuidar la salud de todas las mujeres de nuestra comunidad.</p>
+<a class="mt-md text-primary font-bold flex items-center gap-base hover:gap-md transition-all" href="https://wa.me/5493624204266">
+                            Más información <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Cotizá Online Form Section -->
+<section class="py-xxl bg-deep-navy text-white relative overflow-hidden">
+<div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-primary rounded-full blur-3xl opacity-20"></div>
+<div class="container max-w-container-max mx-auto px-lg relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xxl items-center">
+<div>
+<h2 class="font-display-lg text-display-lg leading-tight mb-md">Cotizá tu salud en 2 minutos</h2>
+<p class="font-body-lg text-body-lg opacity-80 mb-lg">Dejanos tus datos y un asesor te contactará para encontrar el plan que mejor se adapte a vos.</p>
+<div class="space-y-md">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary text-3xl">check_circle</span>
+<span class="font-body-md">Atención personalizada 24/7</span>
+</div>
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary text-3xl">check_circle</span>
+<span class="font-body-md">Cobertura nacional sin fronteras</span>
+</div>
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-primary text-3xl">check_circle</span>
+<span class="font-body-md">Acceso a los mejores sanatorios</span>
+</div>
+</div>
+</div>
+<div class="bg-white text-on-surface p-xl rounded-2xl shadow-2xl">
+<form action="#" class="space-y-md">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div>
+<label class="font-label-md text-label-md block mb-base">Nombre Completo</label>
+<input class="w-full border-outline-variant rounded-lg px-md py-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Ej: Juan Pérez" type="text"/>
+</div>
+<div>
+<label class="font-label-md text-label-md block mb-base">WhatsApp</label>
+<input class="w-full border-outline-variant rounded-lg px-md py-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Ej: +54 9 11..." type="tel"/>
+</div>
+</div>
+<div>
+<label class="font-label-md text-label-md block mb-base">Email</label>
+<input class="w-full border-outline-variant rounded-lg px-md py-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="email@ejemplo.com" type="email"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div>
+<label class="font-label-md text-label-md block mb-base">Provincia</label>
+<select class="w-full border-outline-variant rounded-lg px-md py-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all">
+<option>Seleccionar...</option>
+<option>Buenos Aires</option>
+<option>Santa Fe</option>
+<option>Córdoba</option>
+<option>Chaco</option>
+</select>
+</div>
+<div>
+<label class="font-label-md text-label-md block mb-base">Integrantes</label>
+<input class="w-full border-outline-variant rounded-lg px-md py-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" min="1" type="number" value="1"/>
+</div>
+</div>
+<div>
+<label class="font-label-md text-label-md block mb-base">Plan de Interés</label>
+<div class="grid grid-cols-4 gap-sm">
+<button class="border border-outline-variant rounded-lg py-sm text-center hover:bg-primary-fixed transition-all font-bold" type="button">A1</button>
+<button class="border border-outline-variant rounded-lg py-sm text-center hover:bg-primary-fixed transition-all font-bold" type="button">A2</button>
+<button class="border border-outline-variant rounded-lg py-sm text-center bg-primary text-white font-bold" type="button">A4</button>
+<button class="border border-outline-variant rounded-lg py-sm text-center hover:bg-primary-fixed transition-all font-bold" type="button">A5</button>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary py-md rounded-full font-button-text text-button-text uppercase tracking-widest hover:bg-primary-container transition-all shadow-lg mt-md" type="submit">Solicitar Información</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Planes Section -->
+<section class="py-xxl">
+<div class="container max-w-container-max mx-auto px-lg">
+<div class="text-center mb-xl">
+<h2 class="font-headline-lg text-headline-lg text-secondary">Conocé nuestros Planes</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Soluciones médicas escalables para cada etapa de tu vida.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Plan A1 -->
+<div class="plan-card bg-white border border-outline-variant rounded-2xl p-lg flex flex-col h-full shadow-sm">
+<h3 class="text-4xl font-extrabold text-primary mb-md">A1</h3>
+<h4 class="font-headline-sm text-headline-sm text-secondary mb-sm">Esencial</h4>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-lg">Cobertura esencial a un precio conveniente. Consultorio médico virtual incluido.</p>
+<a class="w-full text-center py-sm border-2 border-primary text-primary rounded-full font-bold hover:bg-primary hover:text-white transition-all" href="https://wa.me/5493624204266">Ver detalle</a>
+</div>
+<!-- Plan A2 -->
+<div class="plan-card bg-white border border-outline-variant rounded-2xl p-lg flex flex-col h-full shadow-sm">
+<h3 class="text-4xl font-extrabold text-primary mb-md">A2</h3>
+<h4 class="font-headline-sm text-headline-sm text-secondary mb-sm">Integral</h4>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-lg">Reintegros. Habitación individual en internación. Cobertura del 40% en farmacias.</p>
+<a class="w-full text-center py-sm border-2 border-primary text-primary rounded-full font-bold hover:bg-primary hover:text-white transition-all" href="https://wa.me/5493624204266">Ver detalle</a>
+</div>
+<!-- Plan A4 -->
+<div class="plan-card bg-secondary text-white rounded-2xl p-lg flex flex-col h-full shadow-xl transform scale-105 relative z-10">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white text-[10px] font-bold px-md py-1 rounded-full uppercase">Recomendado</div>
+<h3 class="text-4xl font-extrabold text-white mb-md">A4</h3>
+<h4 class="font-headline-sm text-headline-sm text-white mb-sm">Premium</h4>
+<p class="font-body-md text-body-md text-white/90 flex-grow mb-lg">Cartilla de prestigio nacional, amplio vademécum y acceso a cirugía estética.</p>
+<a class="w-full text-center py-sm bg-white text-secondary rounded-full font-bold hover:bg-surface-dim transition-all" href="https://wa.me/5493624204266">Ver detalle</a>
+</div>
+<!-- Plan A5 -->
+<div class="plan-card bg-white border border-outline-variant rounded-2xl p-lg flex flex-col h-full shadow-sm">
+<h3 class="text-4xl font-extrabold text-primary mb-md">A5</h3>
+<h4 class="font-headline-sm text-headline-sm text-secondary mb-sm">Exclusivo</h4>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-lg">Habitación VIP, ecografías 5D, 50% en vademécum y cirugías refractivas.</p>
+<a class="w-full text-center py-sm border-2 border-primary text-primary rounded-full font-bold hover:bg-primary hover:text-white transition-all" href="https://wa.me/5493624204266">Ver detalle</a>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-xxl bg-surface-container">
+<div class="container max-w-container-max mx-auto px-lg">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-xxl">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-secondary mb-md">Preguntas Frecuentes</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg">Todo lo que necesitás saber sobre tu cobertura en un solo lugar.</p>
+<a class="inline-block bg-secondary text-white px-lg py-sm rounded-full font-bold shadow-md" href="https://wa.me/5493624204266">Ver todas las FAQs</a>
+</div>
+<div class="lg:col-span-2 space-y-md">
+<!-- FAQ Item 1 -->
+<div class="bg-white rounded-xl shadow-sm border border-outline-variant overflow-hidden">
+<button class="w-full px-lg py-md flex justify-between items-center text-left hover:bg-surface-container-lowest transition-colors" onclick="toggleFaq(this)">
+<span class="font-headline-sm text-headline-sm text-secondary">¿Cómo afiliarme a Prevención Salud?</span>
+<span class="material-symbols-outlined text-primary transition-transform">expand_more</span>
+</button>
+<div class="hidden px-lg pb-md">
+<p class="font-body-md text-body-md text-on-surface-variant">A través de tu Productor Asesor, nuestro formulario de contacto, llamándonos al 0800 444 0000 o en alguna de nuestras oficinas.</p>
+</div>
+</div>
+<!-- FAQ Item 2 -->
+<div class="bg-white rounded-xl shadow-sm border border-outline-variant overflow-hidden">
+<button class="w-full px-lg py-md flex justify-between items-center text-left hover:bg-surface-container-lowest transition-colors" onclick="toggleFaq(this)">
+<span class="font-headline-sm text-headline-sm text-secondary">¿Cómo consultar la cartilla de prestadores?</span>
+<span class="material-symbols-outlined text-primary transition-transform">expand_more</span>
+</button>
+<div class="hidden px-lg pb-md">
+<p class="font-body-md text-body-md text-on-surface-variant">Ingresá a nuestra sección de cartilla médica en la web o app y completá los campos de ubicación y especialidad requeridos.</p>
+</div>
+</div>
+<!-- FAQ Item 3 -->
+<div class="bg-white rounded-xl shadow-sm border border-outline-variant overflow-hidden">
+<button class="w-full px-lg py-md flex justify-between items-center text-left hover:bg-surface-container-lowest transition-colors" onclick="toggleFaq(this)">
+<span class="font-headline-sm text-headline-sm text-secondary">¿En qué momento del mes puedo afiliarme?</span>
+<span class="material-symbols-outlined text-primary transition-transform">expand_more</span>
+</button>
+<div class="hidden px-lg pb-md">
+<p class="font-body-md text-body-md text-on-surface-variant">Podés hacerlo cuando lo desées y acordando con el Asesor Comercial la vigencia de tu ingreso. No hay restricciones de fechas.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-deep-navy text-on-primary py-xxl">
+<div class="container max-w-container-max mx-auto px-lg">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-xxl">
+<div class="space-y-md">
+<span class="text-headline-sm font-headline-sm text-white font-bold">Prevención Salud</span>
+<p class="font-body-sm text-body-sm text-on-primary/70">Líderes en medicina prepaga, brindando soluciones de bienestar con calidez humana y tecnología de punta.</p>
+<div class="flex gap-md">
+<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-all" href="#"><span class="material-symbols-outlined">social_leaderboard</span></a>
+<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-all" href="#"><span class="material-symbols-outlined">account_circle</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-primary-fixed mb-md uppercase tracking-wider">Servicios</h4>
+<ul class="space-y-sm">
+<li><a class="font-body-sm text-body-sm text-on-primary/80 hover:text-on-primary transition-colors" href="#">Planes de medicina</a></li>
+<li><a class="font-body-sm text-body-sm text-on-primary/80 hover:text-on-primary transition-colors" href="#">Cartilla Médica</a></li>
+<li><a class="font-body-sm text-body-sm text-on-primary/80 hover:text-on-primary transition-colors" href="#">Mi Salud Online</a></li>
+<li><a class="font-body-sm text-body-sm text-on-primary/80 hover:text-on-primary transition-colors" href="#">App Autogestión</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-primary-fixed mb-md uppercase tracking-wider">Legales</h4>
+<ul class="space-y-sm">
+<li><a class="font-body-sm text-body-sm text-on-primary/80 hover:text-on-primary transition-colors" href="#">Políticas de Privacidad</a></li>
+<li><a class="font-body-sm text-body-sm text-on-primary/80 hover:text-on-primary transition-colors" href="#">Solicitud de Baja</a></li>
+<li><a class="font-body-sm text-body-sm text-on-primary/80 hover:text-on-primary transition-colors" href="#">Defensa del Consumidor</a></li>
+<li><a class="font-body-sm text-body-sm text-on-primary/80 hover:text-on-primary transition-colors" href="#">Botón de Arrepentimiento</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-primary-fixed mb-md uppercase tracking-wider">Contacto</h4>
+<ul class="space-y-sm font-body-sm text-body-sm text-on-primary/80">
+<li class="flex items-center gap-sm"><span class="material-symbols-outlined text-sm">phone</span> 0800 222 SALUD</li>
+<li class="flex items-center gap-sm"><span class="material-symbols-outlined text-sm">location_on</span> Casa Central, Sunchales</li>
+<li class="flex items-center gap-sm"><span class="material-symbols-outlined text-sm">mail</span> contacto@prevencionsalud.com.ar</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-white/10 pt-lg flex flex-col md:flex-row justify-between items-center gap-md">
+<p class="font-body-sm text-body-sm text-on-primary/60">© 2024 Prevención Salud. Todos los derechos reservados.</p>
+<div class="flex gap-lg">
+<img alt="Data Fiscal" class="h-12 opacity-80 hover:opacity-100 transition-opacity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZLM9L1K6aAGyrxU66aLw6ziq84Ib5gbOxBpHAT5JrUXpZkCcrFHjcvBZXFYLU3ZyKFNuvoB_kKlyfuFtNlaQzJTJvC-shGpBZ3Yk1R3zpIdbGwb_-xFxSJnICtImrIo_8KriuCHra7M-o7gaLOgy62cdvSTuHS1IYB1dHDAe6YiimMYHNBccCu2-fgE5354sK1Uoh9kDvkN0OxBGE8ug_1CtdAIyvq0pQyoPDCvHRJD1X1MEES2agVQwMPz6HdF2V-_E_I4Zqil9M"/>
+<img alt="PDP" class="h-12 opacity-80 hover:opacity-100 transition-opacity grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB47alQR-_snlY7QIfUEvCotIV4ZcMMA3oTV172BpFe0zyxBpr0rkMOkd1eA0Y1bM775hGZiKXqMO3iA-UYGLFwkgFmmSwxRjc1NjZbd8y4KSOcrVsuwsFJlbwI-lM4WU-Tj8v80e7WdZd8to3wxe-BCEFN4wmgPg3O_rt0az_ohthuhvLfrDWN004DAJZklxDjfMXQTP_z1Oi6QKT1BPjxFXmAPjY64gagHnxzJfjsf8FtDsFP4IoDwUOvnI-8toDGxBuC-_y4h3FO"/>
+</div>
+</div>
+</div>
+</footer>
+<!-- Floating WhatsApp -->
+<a class="fixed right-6 bottom-1/2 translate-y-1/2 z-50 group" href="https://wa.me/5493624204266" target="_blank">
+<div class="relative flex items-center justify-center">
+<div class="absolute inset-0 bg-[#25D366] rounded-full animate-ping opacity-25"></div>
+<div class="bg-[#25D366] text-white p-4 rounded-full shadow-2xl flex items-center justify-center relative hover:scale-110 transition-transform cursor-pointer">
+<svg fill="currentColor" height="32" viewbox="0 0 24 24" width="32">
+<path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.246 2.248 3.484 5.232 3.484 8.412-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.309 1.656zm6.29-4.171c1.589.945 3.554 1.443 5.548 1.444 5.46 0 9.897-4.437 9.899-9.899.001-2.646-1.03-5.133-2.903-7.006-1.871-1.871-4.358-2.903-7.003-2.903-5.462 0-9.898 4.438-9.9 9.9-.001 2.112.653 4.163 1.887 5.885l-.393 1.435 1.465-.384zm11.233-6.195c-.3-.15-1.774-.875-2.048-.975-.276-.1-.476-.15-.676.15s-.776.975-.951 1.176c-.174.199-.35.226-.65.076-.3-.15-1.264-.467-2.409-1.486-.889-.794-1.49-1.775-1.665-2.075-.176-.3-.018-.462.13-.61.134-.133.3-.35.45-.525.151-.174.199-.3.3-.5.1-.2.05-.376-.026-.526-.076-.15-.676-1.625-.926-2.226-.243-.585-.49-.505-.676-.514-.174-.009-.374-.01-.575-.01-.2 0-.525.075-.8.376-.276.3-.1.58-.1.58 1.05 2.226 2.476 4.1 4.776 5.35.6.326 1.101.521 1.476.641.6.19 1.15.163 1.587.1.487-.07 1.474-.602 1.674-1.177.2-.574.2-1.074.15-1.176-.05-.101-.2-.15-.5-.3z"></path>
+</svg>
+</div>
+<div class="absolute right-full mr-4 bg-white text-secondary px-md py-sm rounded-lg shadow-xl font-bold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity border border-outline-variant">
+                ¿Necesitás ayuda? ¡Hablemos!
+            </div>
+</div>
+</a>
+<script>
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('.material-symbols-outlined');
+            
+            const isOpen = !content.classList.contains('hidden');
+            
+            // Close all others
+            document.querySelectorAll('#faqs > div > div > div').forEach(div => {
+                if(div !== content) div.classList.add('hidden');
+            });
+            document.querySelectorAll('#faqs button span.material-symbols-outlined').forEach(span => {
+                span.classList.remove('rotate-180');
+            });
+
+            if(isOpen) {
+                content.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            } else {
+                content.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            }
+        }
+    </script>
+</body></html>
