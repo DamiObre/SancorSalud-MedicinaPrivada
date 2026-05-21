@@ -1,0 +1,478 @@
+<!DOCTYPE html><html class="light" lang="es" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Avalian | Cuidamos lo que más valorás</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Hanken+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-surface": "#30302f",
+                        "on-primary-container": "#416400",
+                        "on-background": "#1b1c1b",
+                        "on-tertiary-container": "#00674a",
+                        "inverse-primary": "#98da27",
+                        "on-secondary-fixed-variant": "#0b513d",
+                        "inverse-on-surface": "#f3f0ee",
+                        "status-info": "#3b82f6",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#f0edeb",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-highest": "#e4e2e0",
+                        "primary-fixed": "#b2f746",
+                        "outline": "#727a64",
+                        "tertiary": "#006c4d",
+                        "outline-variant": "#c2cab0",
+                        "on-tertiary-fixed": "#002115",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#a3e635",
+                        "tertiary-container": "#6fe8b7",
+                        "surface-container-low": "#f6f3f1",
+                        "surface-container-high": "#eae8e6",
+                        "on-primary-fixed": "#121f00",
+                        "on-secondary-container": "#306d58",
+                        "status-error": "#ef4444",
+                        "surface-variant": "#e4e2e0",
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-dim": "#dcdad8",
+                        "background-light": "#f9fafb",
+                        "secondary-fixed-dim": "#95d3ba",
+                        "background": "#fbf9f7",
+                        "on-secondary-fixed": "#002117",
+                        "secondary": "#2b6954",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed": "#80f9c7",
+                        "on-surface-variant": "#424936",
+                        "surface-white": "#ffffff",
+                        "error": "#ba1a1a",
+                        "surface": "#fbf9f7",
+                        "secondary-fixed": "#b0f0d6",
+                        "on-primary-fixed-variant": "#334f00",
+                        "primary": "#446900",
+                        "surface-tint": "#446900",
+                        "on-tertiary-fixed-variant": "#005139",
+                        "on-surface": "#1b1c1b",
+                        "secondary-container": "#adedd3",
+                        "surface-bright": "#fbf9f7",
+                        "tertiary-fixed-dim": "#63dcac",
+                        "primary-fixed-dim": "#98da27",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Montserrat"],
+                        "label-md": ["Hanken Grotesk"],
+                        "headline-xl-mobile": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-xl": ["Montserrat"],
+                        "label-sm": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                        "headline-xl-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-xl": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-glass {
+            backdrop-filter: blur(8px);
+            background-color: rgba(255, 255, 255, 0.85);
+        }
+        .shadow-soft {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+        }
+        .shadow-hover:hover {
+            box-shadow: 0 10px 30px rgba(68, 105, 0, 0.1);
+            transform: translateY(-4px);
+        }
+        .transition-all-300 {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Bar -->
+<header class="bg-surface/95 backdrop-blur-md border-b border-outline-variant/30 docked full-width top-0 sticky z-50 shadow-sm">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-8">
+<img alt="Avalian Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida/ADBb0ujlQLx-rP4MEvf41BNxdR8wdvJC5w7V-YgiBJfrQBogtXKyI01AOY37IVt6zROUUY1GHSQvHdDEx_QAX_bWxlJu7YmSAc-jXXrgcPK7Ab3yS7_oBhhcyMThb8AMeWHCoS8TLT-fwuAhwIITne8DX95pw9C0fQWLd1bQIIC8L8bz2O1aBW7A065bMWttBiDyDTCwweS4-jrv0LvZrfT0zXQd4b0GWDIyCAIGFUhx2gE31Laxy5buOiNezh0">
+<nav class="hidden md:flex gap-6">
+<a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1" href="#cotizar">Cotizar aquí</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#planes">Planes</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="https://avalian.com/cartilla">Cartilla</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="https://avalian.com/centros">Centros</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#cotizar">Contacto</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<a class="hidden md:flex items-center gap-2 font-label-md text-label-md text-primary font-bold hover:opacity-80 transition-opacity" href="https://wa.me/543624204266">
+<span class="material-symbols-outlined text-[20px]">chat</span> WhatsApp
+                </a>
+<a class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-label-md text-label-md font-bold hover:opacity-90 transition-opacity" href="#cotizar">
+                    Cotizá Online
+                </a>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative h-[85vh] min-h-[600px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Gente disfrutando de un café" class="w-full h-full object-cover" data-alt="A warm, candid scene of two friends or colleagues in a rustic, modern Argentine cafe, bathed in natural golden hour light. The atmosphere is optimistic and professional, reflecting Avalian's brand of reliability and closeness. High-end lifestyle photography with soft focus on the background elements." src="https://lh3.googleusercontent.com/aida/ADBb0uhUNRSZrXksw1uE3kC0XDaV7rPEXoWRcGUj1jdGjjt04yXsjSgSX3aGL7LfgCgprby2M7ucOWS936i2JRneEziNfijJdWjcH2J8ioJQrcfgrakeuS7T9apQuvTyur4vLHRNV7MuxhrdnufzgXOL7yVAmmu2AeZpkIc2uoSYC-owyef1BuCqJyDEJlgDytBvHZghGh9haEjJ5_0avybnz7UHePGQ6Dv3aIjjCDBPoYaFBJlZF3TiQb-co-w5">
+<div class="absolute inset-0 bg-gradient-to-r from-on-surface/60 to-transparent"></div>
+</div>
+<div class="relative z-10 w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="max-w-2xl text-white">
+<h1 class="font-headline-xl text-headline-xl mb-6 leading-tight">
+                    Cuidamos lo que más valorás: <span class="text-primary-fixed">Tu Salud</span>
+</h1>
+<p class="font-body-lg text-body-lg mb-8 opacity-90 max-w-lg">
+                    Cobertura médica de alta complejidad con la cercanía que merecés. Renovamos nuestra app para estar siempre con vos.
+                </p>
+<div class="flex flex-wrap gap-4">
+<a class="bg-primary-container text-on-primary-container px-10 py-4 rounded-full font-label-md text-label-md font-bold hover:scale-105 transition-all-300" href="#cotizar">
+                        Cotizá Online
+                    </a>
+<a class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-10 py-4 rounded-full font-label-md text-label-md font-bold hover:bg-white/20 transition-all-300 flex items-center gap-2" href="https://wa.me/543624204266">
+<span class="material-symbols-outlined">chat</span> WhatsApp
+                    </a>
+</div>
+</div>
+</div>
+<!-- Floating Quick Access -->
+<div class="absolute bottom-8 left-1/2 -translate-x-1/2 w-full max-w-4xl px-margin-mobile z-20">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="bg-glass shadow-soft p-6 rounded-xl flex items-center gap-4 hover:shadow-lg transition-all-300 cursor-pointer">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[32px]">clinical_notes</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Cartilla Online</p>
+<p class="text-xs text-on-surface-variant">Buscá tus médicos</p>
+</div>
+</div>
+<div class="bg-glass shadow-soft p-6 rounded-xl flex items-center gap-4 hover:shadow-lg transition-all-300 cursor-pointer">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[32px]">location_on</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Centros de Atención</p>
+<p class="text-xs text-on-surface-variant">Cerca de tu ubicación</p>
+</div>
+</div>
+<div class="bg-glass shadow-soft p-6 rounded-xl flex items-center gap-4 hover:shadow-lg transition-all-300 cursor-pointer">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[32px]">credit_card</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Planes para vos</p>
+<p class="text-xs text-on-surface-variant">Tu cobertura ideal</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Plans Section (Bento Grid) -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto overflow-hidden" id="planes">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Planes a tu Medida</h2>
+<div class="w-20 h-1 bg-primary mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Plan 1 -->
+<div class="group bg-surface-white p-8 rounded-xl border border-outline-variant/30 shadow-soft shadow-hover transition-all-300 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-[80px]">bolt</span>
+</div>
+<div class="mb-6">
+<span class="text-primary font-bold text-xs tracking-widest uppercase">Plan Vital</span>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Esencial y ágil para jóvenes.</p>
+</div>
+<div class="mt-auto">
+<a class="inline-flex items-center gap-2 text-primary font-bold hover:underline" href="https://wa.me/543624204266">
+                        Consultar por WhatsApp <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Plan 2 (Highlighted) -->
+<div class="group bg-surface-white p-8 rounded-xl border-t-4 border-primary shadow-soft shadow-hover transition-all-300 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 text-primary/10 group-hover:text-primary/20 transition-all">
+<span class="material-symbols-outlined text-[80px]">groups</span>
+</div>
+<div class="mb-6">
+<span class="text-primary font-bold text-xs tracking-widest uppercase">Plan Integral</span>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Equilibrio perfecto para la familia.</p>
+</div>
+<div class="mt-auto">
+<a class="inline-flex items-center gap-2 text-primary font-bold hover:underline" href="https://wa.me/543624204266">
+                        Consultar por WhatsApp <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Plan 3 -->
+<div class="group bg-surface-white p-8 rounded-xl border border-outline-variant/30 shadow-soft shadow-hover transition-all-300 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-[80px]">workspace_premium</span>
+</div>
+<div class="mb-6">
+<span class="text-primary font-bold text-xs tracking-widest uppercase">Plan Superior</span>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Beneficios premium y cartilla extendida.</p>
+</div>
+<div class="mt-auto">
+<a class="inline-flex items-center gap-2 text-primary font-bold hover:underline" href="https://wa.me/543624204266">
+                        Consultar por WhatsApp <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Plan 4 -->
+<div class="group bg-surface-white p-8 rounded-xl border border-outline-variant/30 shadow-soft shadow-hover transition-all-300 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-[80px]">diamond</span>
+</div>
+<div class="mb-6">
+<span class="text-primary font-bold text-xs tracking-widest uppercase">Plan Selecto</span>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Nuestra máxima cobertura sin límites.</p>
+</div>
+<div class="mt-auto">
+<a class="inline-flex items-center gap-2 text-primary font-bold hover:underline" href="https://wa.me/543624204266">
+                        Consultar por WhatsApp <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Value Prop: Tu Cuenta Online -->
+<section class="bg-surface-container-low py-24">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row items-center gap-16">
+<div class="w-full md:w-1/2 rounded-2xl overflow-hidden shadow-2xl">
+<img alt="Mujer usando la app de Avalian" class="w-full h-auto object-cover" data-alt="A professional young woman using a smartphone in a bright, modern interior setting. The lighting is clean and airy, highlighting a sleek mobile application interface. The scene conveys ease of use, technological advancement, and a customer-centric medical service experience." src="https://lh3.googleusercontent.com/aida/ADBb0ui3UjA2EOGupTMv31chCuwzY_MPq_ysrko_YHNi2CRnaPBCcxp70Y_Y-QgIpISff1PftX3h33xKjuskjpNiWR6nnIbWit1bM40RWzrrHliymQ4z5cHuKY33lDsAPXnvFMfdHTcyvCnBCiDqn4Lbs3Gf9n0_EDDmNvfuHc0SSXnnuuFeFfbEUV8seNbhJyaME_QzhzlftjZdKoIIQ37tk2dzJrf71j61YaqVPlmfxG5Tfm3wXssLEtRp0-WH">
+</div>
+<div class="w-full md:w-1/2 space-y-6">
+<div class="inline-flex items-center gap-3 text-primary bg-primary/10 px-4 py-1 rounded-full font-label-md text-label-md">
+<span class="material-symbols-outlined text-[20px]">smartphone</span> Digital &amp; Fácil
+                </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Tu cuenta Online</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                    Gestioná tus trámites y accedé a la información que necesitás en cualquier momento, desde cualquier lugar. Nuestra nueva app está diseñada para que tu única preocupación sea estar bien.
+                </p>
+<ul class="space-y-4 mb-8">
+<li class="flex items-center gap-3 font-body-md text-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span> Credencial digital siempre disponible
+                    </li>
+<li class="flex items-center gap-3 font-body-md text-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span> Pago de facturas y descarga de comprobantes
+                    </li>
+<li class="flex items-center gap-3 font-body-md text-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span> Gestión de reintegros en un clic
+                    </li>
+</ul>
+<a class="inline-block bg-primary text-white px-8 py-3 rounded-full font-label-md text-label-md font-bold hover:shadow-lg hover:bg-primary/90 transition-all-300" href="https://online.avalian.com/">
+                    Conocer más
+                </a>
+</div>
+</div>
+</section>
+<!-- Integration: e-doc Telemedicine -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="bg-on-secondary-fixed-variant rounded-3xl p-8 md:p-16 flex flex-col md:flex-row items-center gap-12 overflow-hidden relative">
+<!-- Background Decoration -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary-container/10 rounded-full -mr-20 -mt-20 blur-3xl"></div>
+<div class="w-full md:w-1/2 text-white relative z-10">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary-container text-[40px]">medical_services</span>
+<span class="font-headline-md text-headline-md font-bold">e-doc</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg mb-6">Atención médica online las 24 horas</h2>
+<p class="font-body-lg text-body-lg opacity-80 mb-8">
+                    Tu nuevo servicio de telemedicina. Atención médica a través de videollamada desde la comodidad de tu casa o donde estés.
+                </p>
+<div class="flex flex-wrap gap-4">
+<img alt="Google Play" class="h-12 cursor-pointer hover:opacity-80 transition-opacity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrRNEEmAqd-hJJNibbymnhNHX9RzRopGVKGNLb_QEzBNGHO9xZSk0YpXPEGS_Ahw_fBZsRBtixH1wimoDr_i-Mp5afxZHYTAUdgdNXcWdQuNndUdXVGbCRg6p8FnDmNQVvo5RbyYsBnZjewAigEZXsf2AMFH2jguYsfrgnyIpSR1toWQO2iwvJPTh_TUhMUlWd7FcvtpoZT5xA2xQeeWi7sghjKFp7tY8VSqnM3-z97EvCezttaiH47g9RqSOnNaGfJxqzkED38iT0">
+<img alt="App Store" class="h-12 cursor-pointer hover:opacity-80 transition-opacity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmUeV7FZy0jesjiQ5CFA3iq7aL9n2r5XtEDUbs2TWAYcD9dkewcINr2dpd_P6EhuCMUqLI4yXnKv6bCj7iRuAk2vkZ30quZfbXQvmr7LxTTZmVpVOXykyMcf1CoCOa0z2-s5lqQcxknzzq7PWCm3CGaT88ujOP_6hmt5v39C4DXZ1zYL6jiVxlty7VVU7_8x0vWcKPKA2qQQFe4EseDHiaLjVBIe2PWG80OwNP-C1_pJt9CijBoWFAYlSCwo8N1C6vNRl-zjdyfsk5">
+</div>
+</div>
+<div class="w-full md:w-1/2 relative z-10">
+<img alt="Servicio e-doc" class="w-full h-auto drop-shadow-2xl scale-110" data-alt="High-resolution mockup of a modern telemedicine application on multiple devices, featuring friendly professional doctors. The visual style is crisp, clean, and dominated by soft whites and vibrant lime green accents. It showcases a seamless user experience for remote medical consultations in a trusted, digital environment." src="https://lh3.googleusercontent.com/aida/ADBb0uh9boV0dQzKdAopW1As-VOfgt9cWjLsvN8gH5sH1nt-oRXTBmlKD50ZCIa5xU4s8h0knXlQwUWKEGUy7ew75JwUBocy6gNe37cQz2B8DcbHPeClMJwMI-HUQqeCa-Iw15eA_4OVQ269XbNn8asWYlsMD_sKpvTVHvEU7WyNP5QXhtrdk24SAljFup7VfqS2-kiqn-frUnYRuL5H7foYF8lxERtJWPpXGHIfgyfiBbLCmCvHP6J1tikqjl7o">
+</div>
+</div>
+</section>
+<!-- Contact Form Section -->
+<section class="py-24 bg-surface" id="cotizar">
+<div class="px-margin-mobile md:px-margin-desktop max-w-2xl mx-auto bg-surface-white p-8 md:p-12 rounded-2xl shadow-soft border border-outline-variant/30">
+<div class="text-center mb-10">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">Cotizá tu Plan Online</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Completá el formulario y un asesor se contactará con vos.</p>
+</div>
+<form class="space-y-6">
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2">Nombre Completo</label>
+<input class="w-full px-4 py-3 rounded-lg border border-outline-variant bg-surface focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none" placeholder="Ej: Juan Pérez" type="text">
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2">WhatsApp</label>
+<input class="w-full px-4 py-3 rounded-lg border border-outline-variant bg-surface focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none" placeholder="+54 9" type="tel">
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2">Email</label>
+<input class="w-full px-4 py-3 rounded-lg border border-outline-variant bg-surface focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none" placeholder="juan@ejemplo.com" type="email">
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-2">Provincia</label>
+<select class="w-full px-4 py-3 rounded-lg border border-outline-variant bg-surface focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none appearance-none">
+<option value="" disabled="" selected="">Seleccion tu provincia</option>
+<option value="Buenos Aires">Buenos Aires</option>
+<option value="CABA">CABA</option>
+<option value="Santa Fe">Santa Fe</option>
+<option value="Crdoba">Crdoba</option>
+<option value="Chaco">Chaco</option>
+<option value="Mendoza">Mendoza</option>
+<option value="Entre Ros">Entre Ros</option>
+<option value="Tucumn">Tucumn</option>
+</select>
+</div><div>
+<label class="block font-label-md text-label-md text-on-surface mb-2">Personas a Cargo</label>
+<input class="w-full px-4 py-3 rounded-lg border border-outline-variant bg-surface focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none" placeholder="0" type="number" min="0">
+</div><div>
+<label class="block font-label-md text-label-md text-on-surface mb-2">Plan de Interés</label>
+<select class="w-full px-4 py-3 rounded-lg border border-outline-variant bg-surface focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none appearance-none">
+<option>Plan Vital</option>
+<option>Plan Integral</option>
+<option>Plan Superior</option>
+<option>Plan Selecto</option>
+</select>
+</div>
+<a href="#" onclick="const name=document.querySelector('input[type=\'text\']').value; const wa=document.querySelector('input[type=\'tel\']').value; const provincia=document.querySelectorAll('select')[0].value; const plan=document.querySelectorAll('select')[1].value; const cargo=document.querySelector('input[type=\'number\']').value; window.open(`https://wa.me/543624204266?text=Hola, mi nombre es ${name}. Mi WhatsApp es ${wa}. Soy de ${provincia}, tengo ${cargo} personas a cargo y estoy interesado en el ${plan}.`, '_blank'); return false;" class="w-full bg-primary-container text-on-primary-container py-4 rounded-full font-label-md text-label-md font-bold hover:shadow-lg transition-all-300 flex items-center justify-center cursor-pointer">Enviar solicitud de cotización</a>
+</form>
+</div>
+</section>
+<!-- Footer Area (Information Blocks) -->
+<div class="bg-surface-container-highest py-12 px-margin-mobile border-t border-outline-variant/30">
+<div class="max-w-container-max mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
+<a class="bg-surface-white p-6 rounded-xl text-center shadow-sm hover:shadow-md transition-all font-label-md text-label-md text-on-surface flex flex-col items-center gap-2" href="#">
+<span class="material-symbols-outlined text-primary">emergency</span> EMERGENCIAS
+            </a>
+<a class="bg-surface-white p-6 rounded-xl text-center shadow-sm hover:shadow-md transition-all font-label-md text-label-md text-on-surface flex flex-col items-center gap-2" href="#">
+<span class="material-symbols-outlined text-primary">flight_takeoff</span> ASISTENCIA AL VIAJERO
+            </a>
+<a class="bg-surface-white p-6 rounded-xl text-center shadow-sm hover:shadow-md transition-all font-label-md text-label-md text-on-surface flex flex-col items-center gap-2" href="#">
+<span class="material-symbols-outlined text-primary">info</span> INFO ADMINISTRATIVA
+            </a>
+<a class="bg-surface-white p-6 rounded-xl text-center shadow-sm hover:shadow-md transition-all font-label-md text-label-md text-on-surface flex flex-col items-center gap-2" href="#">
+<span class="material-symbols-outlined text-primary">help</span> PREGUNTAS FRECUENTES
+            </a>
+</div>
+</div>
+<!-- Main Footer -->
+<footer class="bg-on-background text-white py-16">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="space-y-6">
+<img alt="Avalian Logo" class="h-10 brightness-0 invert" src="https://lh3.googleusercontent.com/aida/ADBb0ujlQLx-rP4MEvf41BNxdR8wdvJC5w7V-YgiBJfrQBogtXKyI01AOY37IVt6zROUUY1GHSQvHdDEx_QAX_bWxlJu7YmSAc-jXXrgcPK7Ab3yS7_oBhhcyMThb8AMeWHCoS8TLT-fwuAhwIITne8DX95pw9C0fQWLd1bQIIC8L8bz2O1aBW7A065bMWttBiDyDTCwweS4-jrv0LvZrfT0zXQd4b0GWDIyCAIGFUhx2gE31Laxy5buOiNezh0">
+<div class="flex items-center gap-3">
+<img alt="GPTW" class="h-12 w-auto bg-white p-1 rounded" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8Ba5HC47rNfSmZAQfheqQ8Gy3p-umkhT017ww7-AJPIXIIYfmmi7XXyStG4aKlkPc6yONzNmlVEtf_v54V_IvWSSv-SqKeJxwzCPeKohoRn0AJCPy-rsJU-DZUMCaBODDLtaFUZDfkDLyD196Sq8oIeb1WFyntcuhRzDlsY85uAgGdcg8eB8Gdq2Rc_sQznTcdqHoVlMeqzEejoSrY_4WNnw-MN0BXQI3SWVTnwX8W1hOXuMknLjFdsZOMitLro-U_xmMip-2BjYS">
+</div>
+<p class="text-xs text-white/60 leading-relaxed">
+                    © 2024 Avalian Cobertura Médica. Todos los derechos reservados. Matrícula RNEMP Nº 1194.
+                </p>
+</div>
+<div>
+<h4 class="font-label-md text-label-md mb-6 text-primary-fixed uppercase tracking-widest">Quiénes somos</h4>
+<ul class="space-y-3">
+<li class=""><a class="text-white/70 hover:text-primary-fixed text-sm transition-all" href="#">Nosotros</a></li>
+<li class=""><a class="text-white/70 hover:text-primary-fixed text-sm transition-all" href="#">De dónde venimos</a></li>
+<li class=""><a class="text-white/70 hover:text-primary-fixed text-sm transition-all" href="#">Grupo Asociativo</a></li>
+<li class=""><a class="text-white/70 hover:text-primary-fixed text-sm transition-all" href="#">Trabajá con nosotros</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md mb-6 text-primary-fixed uppercase tracking-widest">Información Útil</h4>
+<ul class="space-y-3">
+<li class=""><a class="text-white/70 hover:text-primary-fixed text-sm transition-all" href="#">Emergencias: 0800 555 5556</a></li>
+<li class=""><a class="text-white/70 hover:text-primary-fixed text-sm transition-all" href="#">Atención: 0810 222 72583</a></li>
+
+<li class=""><a class="text-white/70 hover:text-primary-fixed text-sm transition-all" href="#">Código de ética</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md mb-6 text-primary-fixed uppercase tracking-widest">Redes Sociales</h4>
+<div class="flex gap-4 mb-8">
+<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-primary hover:border-primary transition-all" href="#">
+<span class="material-symbols-outlined text-[18px]">public</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-primary hover:border-primary transition-all" href="#">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-primary hover:border-primary transition-all" href="#">
+<span class="material-symbols-outlined text-[18px]">videocam</span>
+</a>
+</div>
+<div class="p-4 bg-white/5 rounded-xl">
+<p class="text-xs text-white/50 mb-2">Recibí nuestras novedades</p>
+<div class="flex gap-2">
+<input class="bg-white/10 border-none rounded-lg text-sm px-3 py-2 w-full focus:ring-1 focus:ring-primary" placeholder="Tu email" type="email">
+<button class="bg-primary-container text-on-primary-container p-2 rounded-lg">
+<span class="material-symbols-outlined text-[20px]">send</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<!-- Fixed Floating Action Button -->
+<a class="fixed bottom-8 right-8 bg-[#25D366] text-white p-4 rounded-full shadow-2xl flex items-center gap-2 z-[100] group hover:scale-110 transition-all duration-300" href="https://wa.me/543624204266">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
+<span class="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-300 font-bold whitespace-nowrap">Hola, soy Ava</span>
+</a>
+<script>
+        // Simple micro-interaction for header scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.add('py-4');
+                header.classList.remove('py-2');
+            }
+        });
+
+        // Form submission prevention for demo
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Gracias por tu interés. Un asesor de Avalian te contactará a la brevedad.');
+        });
+    </script>
+
+
+</body></html>
