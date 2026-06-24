@@ -4,10 +4,13 @@
   <url>
     <loc>https://saludnea.com.ar</loc>
   </url>
-
+   <url>
+    <loc>https://www.saludnea.com.ar/prevencion</loc>
+  </url>
     <url>
     <loc>https://saludnea.com.ar/omint</loc>
   </url>
+ 
   <url>
     <loc>https://saludnea.com.ar/prevencion</loc>
   </url>
