@@ -1,438 +1,290 @@
-<!DOCTYPE html><html class="scroll-smooth" lang="es" style=""><head>
+<!DOCTYPE html><html class="light" lang="es"><head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Sancor Salud | Cobertura Médica de Excelencia</title>
+<title>Salud Nea | Protección Integral de Salud</title><link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/aida-public/AB6AXuC9mz4nXiCoNLOw29Hd_PRjN6DJrWvpG3FhBEbIvDikmD0qDA4--mpdGPopizsbkNN15V41WwBqj79Ahz1gsvtyCDVoam-8coMe7wEZwyDwWMu1YUYkZ1kDKWuu3yfsH4IvL8NcXuphPUY0vsusA7F2UEUUDAARoHcsinj6WiEb1pNct9FG4gDxYzB2AjIAvYGYvpAI_LSM4PO2_DnznugffHGiTzPn8NAK1BQFS8e4Rr87bHKe-MOabNcGFi0-m0RTSlfaie1vfk8F">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <script id="tailwind-config">
         tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        primary: "#004A99",
-                        "sancor-blue": "#004A99",
-                        "sancor-light": "#00AEEF",
-                        "on-primary-fixed-variant": "#3c475b",
-                        "primary-fixed": "#d7e3fc",
-                        "secondary-fixed": "#dae2ff",
-                        "on-primary-fixed": "#101c2e",
-                        "surface-bright": "#f8f9fa",
-                        "on-primary-container": "#79849b",
-                        "on-secondary-container": "#fefcff",
-                        "on-error": "#ffffff",
-                        "surface-variant": "#e1e3e4",
-                        "on-tertiary": "#ffffff",
-                        "surface-container-high": "#e7e8e9",
-                        "on-error-container": "#93000a",
-                        error: "#ba1a1a",
-                        "on-tertiary-container": "#009844",
-                        "surface-dim": "#d9dadb",
-                        "on-surface": "#191c1d",
-                        "surface-container-highest": "#e1e3e4",
-                        "primary-fixed-dim": "#bbc7df",
-                        "on-secondary-fixed-variant": "#0040a1",
-                        "on-secondary-fixed": "#001848",
-                        "tertiary-container": "#002109",
-                        "on-primary": "#ffffff",
-                        "primary-container": "#101c2e",
-                        "tertiary-fixed-dim": "#3de273",
-                        "on-tertiary-fixed": "#002109",
-                        "on-secondary": "#ffffff",
-                        "surface-container-low": "#f3f4f5",
-                        "secondary-fixed-dim": "#b2c5ff",
-                        background: "#f8f9fa",
-                        "on-surface-variant": "#45474c",
-                        "outline-variant": "#c5c6cd",
-                        secondary: "#00AEEF",
-                        "on-background": "#191c1d",
-                        "inverse-on-surface": "#f0f1f2",
-                        surface: "#f8f9fa",
-                        "surface-container": "#edeeef",
-                        "inverse-primary": "#bbc7df",
-                        "secondary-container": "#346ee7",
-                        "surface-container-lowest": "#ffffff",
-                        tertiary: "#000000",
-                        "inverse-surface": "#2e3132",
-                        "error-container": "#ffdad6",
-                        "surface-tint": "#535f74",
-                        outline: "#75777d",
-                        "on-tertiary-fixed-variant": "#005322",
-                        "tertiary-fixed": "#66ff8e",
-                        whatsapp: "#25D366",
-                        gold: "#F2A20C",
-                        "neon-green": "#39FF14",
-                        "neon-cyan": "#00FFFF"
-                    },
-                    borderRadius: {
-                        DEFAULT: "0.125rem",
-                        lg: "0.25rem",
-                        xl: "0.5rem",
-                        full: "0.75rem"
-                    },
-                    spacing: {
-                        sm: "12px",
-                        gutter: "24px",
-                        "container-max": "1280px",
-                        md: "24px",
-                        lg: "48px",
-                        xl: "80px",
-                        base: "8px",
-                        xs: "4px"
-                    },
-                    fontFamily: {
-                        "display-lg": ["Montserrat"],
-                        "headline-lg": ["Montserrat"],
-                        "headline-lg-mobile": ["Montserrat"],
-                        "label-md": ["Inter"],
-                        "body-md": ["Inter"],
-                        "headline-md": ["Montserrat"],
-                        "body-lg": ["Inter"],
-                        caption: ["Inter"],
-                        headline: ["Montserrat"],
-                        display: ["Montserrat"],
-                        body: ["Inter"],
-                        label: ["Inter"]
-                    },
-                    fontSize: {
-                        "display-lg": ["48px", {lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700"}],
-                        "headline-lg": ["32px", {lineHeight: "1.2", letterSpacing: "-0.01em", fontWeight: "700"}],
-                        "headline-lg-mobile": ["28px", {lineHeight: "1.2", fontWeight: "700"}],
-                        "label-md": ["14px", {lineHeight: "1.4", letterSpacing: "0.01em", fontWeight: "500"}],
-                        "body-md": ["16px", {lineHeight: "1.5", fontWeight: "400"}],
-                        "headline-md": ["24px", {lineHeight: "1.3", fontWeight: "600"}],
-                        "body-lg": ["18px", {lineHeight: "1.6", fontWeight: "400"}],
-                        caption: ["12px", {lineHeight: "1.2", fontWeight: "400"}]
-                    }
-                }
-            }
-        };
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary": "#b32a00",
+                      "tertiary-fixed-dim": "#c1c8ca",
+                      "on-error": "#ffffff",
+                      "surface-variant": "#e1e3e4",
+                      "on-surface-variant": "#42493b",
+                      "on-secondary-container": "#550f00",
+                      "primary": "#336b07",
+                      "surface-bright": "#f8f9fa",
+                      "tertiary": "#586062",
+                      "on-secondary": "#ffffff",
+                      "surface-container-low": "#f3f4f5",
+                      "on-primary-fixed-variant": "#235100",
+                      "primary-fixed-dim": "#98d86c",
+                      "on-secondary-fixed": "#3c0800",
+                      "secondary-fixed-dim": "#ffb4a1",
+                      "on-tertiary-container": "#2f3638",
+                      "surface-dim": "#d9dadb",
+                      "outline-variant": "#c1c9b6",
+                      "on-surface": "#191c1d",
+                      "outline": "#727a69",
+                      "on-error-container": "#93000a",
+                      "background": "#f8f9fa",
+                      "surface-container-highest": "#e1e3e4",
+                      "on-tertiary-fixed": "#161d1f",
+                      "on-secondary-fixed-variant": "#891e00",
+                      "on-primary-fixed": "#0a2100",
+                      "on-tertiary-fixed-variant": "#41484a",
+                      "secondary-container": "#fc5a2f",
+                      "on-primary": "#ffffff",
+                      "surface-container": "#edeeef",
+                      "tertiary-container": "#979ea0",
+                      "on-tertiary": "#ffffff",
+                      "on-background": "#191c1d",
+                      "inverse-surface": "#2e3132",
+                      "tertiary-fixed": "#dde4e6",
+                      "secondary-fixed": "#ffdbd2",
+                      "primary-container": "#70ad47",
+                      "on-primary-container": "#193d00",
+                      "error": "#ba1a1a",
+                      "primary-fixed": "#b3f585",
+                      "surface-tint": "#336b07",
+                      "surface": "#f8f9fa",
+                      "surface-container-high": "#e7e8e9",
+                      "inverse-primary": "#98d86c",
+                      "surface-container-lowest": "#ffffff",
+                      "inverse-on-surface": "#f0f1f2",
+                      "error-container": "#ffdad6"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "64px",
+                      "xl": "80px",
+                      "md": "24px",
+                      "xs": "4px",
+                      "lg": "48px",
+                      "margin-mobile": "16px",
+                      "base": "8px",
+                      "sm": "12px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "display-lg": ["Montserrat"],
+                      "body-md": ["Plus Jakarta Sans"],
+                      "headline-md": ["Montserrat"],
+                      "headline-lg": ["Montserrat"],
+                      "label-sm": ["Plus Jakarta Sans"],
+                      "headline-lg-mobile": ["Montserrat"],
+                      "label-lg": ["Plus Jakarta Sans"],
+                      "body-lg": ["Plus Jakarta Sans"]
+              },
+              "fontSize": {
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                      "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                      "label-lg": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
     </script>
 <style>
-        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
-        .reveal.active { opacity: 1; transform: translateY(0); }
-        .hover-lift { transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); }
-        .hover-lift:hover { transform: translateY(-8px) scale(1.05); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1); border-color: #00AEEF; }
-        .wa-pulse { animation: pulse-green 2s infinite; }
-        @keyframes pulse-green {
-            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
-        .bg-hero-overlay { background: linear-gradient(rgba(0, 74, 153, 0.75), rgba(0, 174, 239, 0.55)); }
-        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
-        .image-zoom-container { overflow: hidden; border-radius: 0.75rem; }
-        .image-zoom-container img { transition: transform 0.6s ease, filter 0.6s ease; }
-        .image-zoom-container:hover img { transform: scale(1.08); filter: brightness(1.1); }
-        .btn-hover-effect { transition: all 0.3s ease; }
-        .btn-hover-effect:hover { background-color: #00AEEF; transform: scale(1.05); }
+        .hero-gradient {
+            background: linear-gradient(to right, rgba(248, 249, 250, 1) 0%, rgba(248, 249, 250, 0.9) 40%, rgba(248, 249, 250, 0) 100%);
+        }
+        @media (max-width: 768px) {
+            .hero-gradient {
+                background: linear-gradient(to bottom, rgba(248, 249, 250, 1) 0%, rgba(248, 249, 250, 0.8) 100%);
+            }
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
+        }
+        .partner-card:hover {
+            transform: translateY(-8px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
     </style>
 </head>
-<body class="bg-surface-bright text-on-surface font-body-md selection:bg-secondary-fixed">
-<!-- Navigation Shell -->
-<header class="docked full-width top-0 sticky z-50 transition-all duration-300 shadow-sm h-[80px] bg-sancor-blue" id="top-nav">
-<nav class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-[80px]">
-<div class="flex items-center gap-2">
-<img alt="Sancor Salud" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiALMDpADqEIBUTXxIrXwLTWVtAlfLWQa7_DZNDJYN5_tCw1dDWBxD-8974ItY2mDq10S1-KMTOxnO_MR3COyx9Vzwjso1WXAsq6NhMLdwqYMjeFcqUWltYoXIRGjVJtoi7MufZZRkWUWxH1NjFNUziac0QNabTSoIjmAuUlblYEOvxJri74dri1I4hu3F5lOjUN14pyKj3rgMe2kYVvP5pJbTnOOX0ymhAj89UgeULjX873qwDoIZvxOA4SRrYOd_6wWvuLE0wwT1" style="filter: brightness(0) invert(1);">
+<body class="bg-background text-on-background font-body-md">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 z-50 w-full bg-surface dark:bg-on-surface shadow-sm">
+<nav class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<img alt="Salud Nea Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmq3awAk0tyud16gP25IQy3WRMM4yPkXwI8WhonTglS1g767GAGF_IrdTK41IlzT6vP5a4mWVspl2sK0_kX8Ja9jaNaUZvcriy-1pgQbTBBfnGoBKGMFIy1oFMQOdOH2CJ5N-_2RYo8tk1Z8mk0htC2tS4Z8CuCq9fIFh9SR13NRrJjWNlMG_3q-KjCeMt5Bm0vj3_krvR_Gj31u_CUt95Er-UL2eSnQhjyhlFzCog-H_PsG_bj43gwcmt1T4uo9c3WwsyVTiuACKR">
+<span class="text-headline-md font-headline-md font-bold text-primary dark:text-primary-fixed-dim hidden sm:block">Salud Nea</span>
 </div>
-<div class="hidden md:flex items-center gap-xl">
-<a class="font-label-md text-label-md font-bold border-b-2 pb-1 text-neon-cyan transition-all hover:scale-110 active:scale-95 border-neon-cyan" href="#inicio">Inicio</a>
-<a class="font-label-md text-label-md hover:text-sancor-blue transition-colors text-neon-cyan transition-all hover:scale-110 active:scale-95" href="#planes">Planes</a>
-<a class="font-label-md text-label-md hover:text-sancor-blue transition-colors text-neon-cyan transition-all hover:scale-110 active:scale-95" href="#contacto">Contacto</a>
+<div class="hidden md:flex gap-base">
+<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary font-bold font-label-lg px-4 py-2 hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">Planes Familiares</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium font-label-lg px-4 py-2 hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">Cobertura PyMES</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium font-label-lg px-4 py-2 hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">Cartilla Médica</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium font-label-lg px-4 py-2 hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200" href="#">Nosotros</a>
 </div>
-<a class="bg-whatsapp text-white px-md py-sm rounded-full font-label-md flex items-center gap-2 hover:scale-105 active:scale-95 transition-all shadow-md" href="https://wa.me/5493624204266" target="_blank">
-<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">chat</span>
-<span class="hidden sm:inline">WhatsApp</span>
-</a>
+<button class="bg-primary-container text-on-primary-container hover:bg-primary transition-all duration-300 rounded-lg px-6 py-2.5 font-label-lg font-bold shadow-sm active:scale-95">
+                Contactar Asesor
+            </button>
 </nav>
 </header>
-<main>
+<main class="pt-20">
 <!-- Hero Section -->
-<section class="relative h-[870px] flex items-center overflow-hidden" id="inicio">
+<section class="relative min-h-[85vh] flex items-center overflow-hidden">
+<!-- Hero Background -->
 <div class="absolute inset-0 z-0">
-<img class="w-full h-full object-cover" data-alt="A sun-drenched cinematic shot of a multi-generational Argentine family laughing and hugging in a lush green park." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOLFZmpRBv3FhLSyAsOPvtDQE9ISmKjv0yN2InWH_5GF-1HiR8dH5PN2Jgpy2WiaOxdkwr98t4YUcMaivHVdn1E1DvnHfgMq6nKWk4VZFXnXJ-GbVee25Ez07JGEsNmMZkNQkezUSQDp_YiQz8OhfHlnAZzK6x2qdH6BqfPXjPpnywToi98ria92mPtGSZ3sBV3Sqv0QdkMC37LbZjm02OlQbuXygxc3Z_a1kPkiwnRIDdlRLnqChXmixc6R2OgQy245oypVbmCqn6">
-<div class="absolute inset-0 bg-hero-overlay"></div>
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB4g4UrOgqpLhyjKXylSK94Ij-8oXfgQyIJEfVwU9ySfjvuwC6XN_b9ScOLd8jjuTXvRaUrVQrryuF54sZcUipH_xYZus710vHCdidlgT2Ciade_7u_dHngsxc-99PGJkZZ_GALGuOMO6ROL7JwpRKgnoE-pntCuBkpAEhPWJmO9KPv7sMmhy7Gsck7va2V587SlqvaI7zWo-dQmriwW7Dvk0spzLa2Kh-gWr6Ef31CIhac_xd9XPL4Unchb7iI45hbgwCE8NJjmca4')"></div>
+<div class="absolute inset-0 hero-gradient"></div>
 </div>
-<div class="relative z-10 w-full px-gutter max-w-container-max mx-auto text-white">
-<div class="grid grid-cols-1 md:grid-cols-12 items-center gap-xl">
-<div class="md:col-span-7 reveal active">
-<h1 class="font-display-lg text-display-lg md:text-[64px] mb-md leading-tight">
-                        Tu salud y la de tu <span class="text-neon-green">familia</span>, <span class="text-neon-cyan">protegidas</span>
-</h1>
-<p class="font-body-lg text-body-lg mb-lg opacity-90">
-                        Brindamos cobertura médica de alta complejidad con el respaldo de Sancor Salud. Descubrí el plan ideal para tu etapa de vida.
+<div class="container mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+<div class="max-w-2xl">
+<img alt="Salud Nea Main Logo" class="w-32 h-32 md:w-48 md:h-48 mb-8 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmq3awAk0tyud16gP25IQy3WRMM4yPkXwI8WhonTglS1g767GAGF_IrdTK41IlzT6vP5a4mWVspl2sK0_kX8Ja9jaNaUZvcriy-1pgQbTBBfnGoBKGMFIy1oFMQOdOH2CJ5N-_2RYo8tk1Z8mk0htC2tS4Z8CuCq9fIFh9SR13NRrJjWNlMG_3q-KjCeMt5Bm0vj3_krvR_Gj31u_CUt95Er-UL2eSnQhjyhlFzCog-H_PsG_bj43gwcmt1T4uo9c3WwsyVTiuACKR">
+<h1 class="font-display-lg text-display-lg md:text-[56px] text-primary leading-tight mb-6">
+                        Salud Nea
+                    </h1>
+<p class="font-headline-lg text-on-surface-variant mb-10 max-w-xl">
+                        Protección integral para familias y PyMEs en todo el NEA.
                     </p>
-<div class="flex flex-col sm:flex-row gap-md">
-<a class="bg-sancor-blue text-white font-label-md py-4 px-lg rounded-full text-center btn-hover-effect shadow-lg" href="#planes">
-                            Ver nuestros planes
-                        </a>
-<a class="bg-whatsapp text-white font-label-md py-4 px-lg rounded-full text-center flex items-center justify-center gap-2 btn-hover-effect shadow-lg" href="https://wa.me/5493624204266" target="_blank">
-<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">chat</span>
-                            Asesoramiento Online
-                        </a>
-</div>
-</div>
-<div class="hidden md:flex md:col-span-5 justify-center lg:justify-end reveal active" style="transition-delay: 200ms;">
-<img alt="Sancor Salud Logo" class="w-full max-w-[450px] h-auto drop-shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZF2XKuo6U5_ynhfTucl6uimhyIoThlcLCV_Ql3EWt6qF9ft7UkgKyyAzht5ky47jqUfVKYWJXwgbB2Y2XVtDxhrMh1cNf8mz3k5x0dcLuLv6ZuSOwCDQ4PRjXLBdBj9q9ILcAoSv8NzSvBrSGNzAJ4b4IzugYN2Sj6nRhUFikPNYkmRI4GUrra-yqizJzPDcpYv8HBOSBYQxY3g3qcqF8Bvl-7RgN1AKZMPP9aCcR55RfbgWVUbhCNa_3vPIDsWHZ9eofF5wokD8Z">
+<div class="flex flex-wrap gap-md">
+<button class="bg-primary-container text-on-primary-container hover:bg-primary px-8 py-4 rounded-lg font-bold text-lg shadow-lg transition-all duration-300">
+                            Ver Coberturas
+                        </button>
+<button class="border-2 border-secondary text-secondary hover:bg-secondary hover:text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300">
+                            Saber Más
+                        </button>
 </div>
 </div>
 </div>
 </section>
-<!-- Secondary Brand Image Section -->
-<section class="py-xl px-gutter max-w-container-max mx-auto reveal active">
-<div class="flex flex-col md:flex-row items-center gap-xl">
-<div class="md:w-1/2">
-<div class="image-zoom-container shadow-lg">
-<img alt="Cercanía Sancor Salud" class="w-full h-auto object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7AlTlZlnoCq8o_h3CICBVx8P-JsGPfDNRbUTwIx8R576gbk6DE2swziN7uwYUz66mboYTbC9A8Psp7dNUtV4FQ1EWDhkrhPd9MBwl5G-w3x2IDiEn9OcWUol5wyEDadgYxoJ160olo1y3YwZP265pLt3Z-tzqM9fgw8QskA4030N3MO7HHBdqhph2kLtdUNDKqdmcCIQLV6Lw_qDeL0gJLRbuSo1ZLe0m5jmBWL51XiyO3JmSMTTwzXH17XXSQ_gmK3D-K5GzsfXN">
+<!-- Partners Section -->
+<section class="py-xl bg-surface-container-low">
+<div class="container mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Nuestros Partners Estratégicos</h2>
+<p class="font-body-lg text-on-surface-variant">Trabajamos con las prepagas líderes para brindarte la mejor atención médica.</p>
 </div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Partner 1: Sancor Salud -->
+<a class="partner-card group" href="https://saludnea.com.ar/sancorsalud/">
+<div class="bg-surface-container-lowest rounded-xl p-8 h-full shadow-sm border border-outline-variant hover:border-primary transition-all flex flex-col items-center justify-between text-center">
+<div class="w-full aspect-[3/2] flex items-center justify-center mb-6 grayscale group-hover:grayscale-0 transition-all duration-300">
+<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkAYPlTYWL4l7BvJ04_VGFPNCm7JGzGMEvaAfuo8fbLORdQTJJAVLj2y-7Vr3gN1pU8QhqBBofRQ13LfyVxRjn5p9MUR2Dob707-Nn8JsoVeA-9WXuBbCFYBIk12GxVaLSJfArHAFwI2vwpgNW4fY0tAD-esJ2STUqEhtxcIZUBiQrlpE6_FlEMOLuZTGgE-sLh-F2aZ-p1PFRhaW3nQQwnA9XeHMwUa0uBYAWG11pV-o9ZE0K2BdLGpSv4psLbDepoepOOOAqUEJm" alt="Sancor Salud" class="w-full h-full object-contain">
 </div>
-<div class="md:w-1/2">
-<h2 class="font-headline-lg text-headline-lg text-sancor-blue mb-md">Cerca tuyo, siempre.</h2>
-<p class="font-body-lg text-on-surface-variant mb-md">En Sancor Salud entendemos que lo más importante es la tranquilidad de saber que contás con el mejor respaldo médico cuando más lo necesitás.</p>
-<p class="font-body-lg text-on-surface-variant">Tecnología de vanguardia y una red de prestadores en todo el país para cuidarte de forma integral.</p>
+<span class="text-primary font-bold font-label-lg group-hover:translate-x-1 transition-transform inline-flex items-center gap-2">
+                                Ver Planes <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</span>
 </div>
+</a>
+<!-- Partner 2: Prevención Salud -->
+<a class="partner-card group" href="https://saludnea.com.ar/prevencion/">
+<div class="bg-surface-container-lowest rounded-xl p-8 h-full shadow-sm border border-outline-variant hover:border-primary transition-all flex flex-col items-center justify-between text-center">
+<div class="w-full aspect-[3/2] flex items-center justify-center mb-6 grayscale group-hover:grayscale-0 transition-all duration-300">
+<img src="https://lh3.googleusercontent.com/aida/AP1WRLvE28x1H8GSrc3qGg8FLuvw6BLW51rBGGwzvsttkO5b7Z2Qp44M18lPUzDQhgoHo2O6u-HL3kvRPN0rGeXghPQPPPzT5F1WXcTwjPd09VX0EcM0oUnFh5DF2nMqxhTFB-a2JtcFu0Mlqr5xCWn-4sf3ucJv_a6q5ye6IxGzb_WFe5Df0YehvpviO7B9CcEmCcpvRHBprZtQUCBO39sdU2lp42Ki-9QDpkp-TGVYq7MEq51eSb8oJD3Zbxc" alt="Prevención Salud" class="w-full h-full object-contain">
 </div>
-</section>
-<!-- Planes Section -->
-<section class="py-xl px-gutter max-w-container-max mx-auto bg-surface-container-low/50 rounded-2xl mb-xl reveal active" id="planes">
-<div class="text-center mb-xl">
-<h2 class="font-headline-lg text-headline-lg text-sancor-blue mb-xs">Planes Sancor Salud</h2>
-<div class="h-1 w-20 bg-sancor-light mx-auto rounded-full"></div>
-<p class="mt-md text-on-surface-variant max-w-xl mx-auto font-body-md">Seleccioná la opción que mejor se adapte a tus necesidades y comenzá a disfrutar de la mejor atención médica.</p>
+<span class="text-primary font-bold font-label-lg group-hover:translate-x-1 transition-transform inline-flex items-center gap-2">
+                                Ver Planes <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</span>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
-<!-- Línea ON -->
-<div class="bg-surface-container-lowest p-lg rounded-lg shadow-sm hover-lift border border-outline-variant/30 flex flex-col justify-between">
-<div>
-<span class="material-symbols-outlined text-sancor-blue text-[48px] mb-md">devices</span>
-<h3 class="font-headline-md text-headline-md text-sancor-blue mb-sm">Línea ON</h3>
-<p class="text-on-surface-variant mb-md font-body-md">Acceso digital y red esencial para quienes buscan agilidad y practicidad.</p>
-<ul class="space-y-base mb-lg font-body-md">
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sancor-light text-sm">check_circle</span> Gestión 100% Online</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sancor-light text-sm">check_circle</span> Cartilla seleccionada</li>
-</ul>
+</a>
+<!-- Partner 3: Avalian -->
+<a class="partner-card group" href="https://saludnea.com.ar/avalian/">
+<div class="bg-surface-container-lowest rounded-xl p-8 h-full shadow-sm border border-outline-variant hover:border-primary transition-all flex flex-col items-center justify-between text-center">
+<div class="w-full aspect-[3/2] flex items-center justify-center mb-6 grayscale group-hover:grayscale-0 transition-all duration-300">
+<img src="https://avalian.com/assets/images/logo-avalian-nav.png" alt="Avalian" class="w-full h-full object-contain">
 </div>
-<a class="w-full bg-sancor-blue text-white py-sm rounded-full font-label-md text-center btn-hover-effect" href="https://wa.me/5493624204266?text=Hola!%20Me%20gustaría%20info%20sobre%20la%20Línea%20ON" target="_blank">Consultar por WhatsApp</a>
+<span class="text-primary font-bold font-label-lg group-hover:translate-x-1 transition-transform inline-flex items-center gap-2">
+                                Ver Planes <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</span>
 </div>
-<!-- Línea Digital Flex -->
-<div class="bg-surface-container-lowest p-lg rounded-lg shadow-sm hover-lift border border-outline-variant/30 flex flex-col justify-between">
-<div>
-<span class="material-symbols-outlined text-sancor-blue text-[48px] mb-md">settings_accessibility</span>
-<h3 class="font-headline-md text-headline-md text-sancor-blue mb-sm">Línea Digital Flex</h3>
-<p class="text-on-surface-variant mb-md font-body-md">Flexibilidad y autogestión adaptadas a tu ritmo de vida dinámico.</p>
-<ul class="space-y-base mb-lg font-body-md">
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sancor-light text-sm">check_circle</span> Planes 800/1000</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sancor-light text-sm">check_circle</span> Mayor flexibilidad</li>
-</ul>
+</a>
+<!-- Partner 4: Omint -->
+<a class="partner-card group" href="https://saludnea.com.ar/omint/" style="transform: translateY(0px);">
+<div class="bg-surface-container-lowest rounded-xl p-8 h-full shadow-sm border border-outline-variant hover:border-primary transition-all flex flex-col items-center justify-between text-center">
+<div class="w-full aspect-[3/2] flex items-center justify-center mb-6 grayscale group-hover:grayscale-0 transition-all duration-300">
+<img src="https://lh3.googleusercontent.com/aida/AP1WRLta5RMIvkO8DjxXE0UaEHYaa-oTTXgVzT-sM1INKmsy8KjqjdkI5fk1UFqPNwi8TWJNUVspY7iLEe5zR6OL9XvfvArxP4FRUmPh_vvAot3j9mSikzQw4kbQymjSR8msiT2mVxqX8vmebTkoSKVi1ISwrzFKX_WXlMp88juAi2OykVyPw71TuXPCxPq-vWyvI123fAt32z8v2W5jocRkNo9rXFryBBrvrsgKteGqf0VHyZs7PzJjFyhTsHT6" alt="Omint" class="w-full h-full object-cover object-center rounded-lg">
 </div>
-<a class="w-full bg-sancor-blue text-white py-sm rounded-full font-label-md text-center btn-hover-effect" href="https://wa.me/5493624204266?text=Hola!%20Me%20gustaría%20info%20sobre%20la%20Línea%20Digital%20Flex" target="_blank">Consultar por WhatsApp</a>
+<span class="text-primary font-bold font-label-lg group-hover:translate-x-1 transition-transform inline-flex items-center gap-2">
+                                Ver Planes <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</span>
 </div>
-<!-- Línea FAM -->
-<div class="bg-surface-container-lowest p-lg rounded-lg shadow-sm hover-lift border border-outline-variant/30 flex flex-col justify-between">
-<div>
-<span class="material-symbols-outlined text-sancor-blue text-[48px] mb-md">family_restroom</span>
-<h3 class="font-headline-md text-headline-md text-sancor-blue mb-sm">Línea FAM</h3>
-<p class="text-on-surface-variant mb-md font-body-md">Pensada para el bienestar integral de toda la familia con amplio respaldo.</p>
-<ul class="space-y-base mb-lg font-body-md">
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sancor-light text-sm">check_circle</span> Planes F700/F800</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sancor-light text-sm">check_circle</span> Cobertura familiar</li>
-</ul>
-</div>
-<a class="w-full bg-sancor-blue text-white py-sm rounded-full font-label-md text-center btn-hover-effect" href="https://wa.me/5493624204266?text=Hola!%20Me%20gustaría%20info%20sobre%20la%20Línea%20FAM" target="_blank">Consultar por WhatsApp</a>
-</div>
-<!-- Línea Clásica (FEATURED) -->
-<div class="bg-surface-container-lowest p-lg rounded-lg shadow-md hover-lift border-2 border-sancor-blue relative overflow-hidden flex flex-col justify-between">
-<div class="absolute top-4 right-[-35px] bg-sancor-light text-white font-label-md px-10 py-1 rotate-45 text-[12px] uppercase tracking-wider">
-                    Más Elegido
-                </div>
-<div>
-<span class="material-symbols-outlined text-sancor-blue text-[48px] mb-md">star</span>
-<h3 class="font-headline-md text-headline-md text-sancor-blue mb-sm">Línea Clásica</h3>
-<p class="text-on-surface-variant mb-md font-body-md">La cobertura tradicional más completa. Incluye el prestigioso plan S3000.</p>
-<ul class="space-y-base mb-lg font-body-md">
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sancor-light text-sm">check_circle</span> Plan S3000 Destacado</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sancor-light text-sm">check_circle</span> Amplia Cartilla Médica</li>
-</ul>
-</div>
-<a class="w-full bg-sancor-blue text-white py-sm rounded-full font-label-md text-center btn-hover-effect" href="https://wa.me/5493624204266?text=Hola!%20Me%20gustaría%20info%20sobre%20la%20Línea%20Clásica%20(S3000)" target="_blank">Consultar por WhatsApp</a>
-</div>
-<!-- Línea GEN -->
-<div class="bg-surface-container-lowest p-lg rounded-lg shadow-sm hover-lift border border-outline-variant/30 flex flex-col justify-between">
-<div>
-<span class="material-symbols-outlined text-sancor-blue text-[48px] mb-md">bolt</span>
-<h3 class="font-headline-md text-headline-md text-sancor-blue mb-sm">Línea GEN</h3>
-<p class="text-on-surface-variant mb-md font-body-md">Innovación y protección diseñada para las nuevas generaciones.</p>
-<ul class="space-y-base mb-lg font-body-md">
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sancor-light text-sm">check_circle</span> GEN W / GEN XT</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sancor-light text-sm">check_circle</span> Enfoque Preventivo</li>
-</ul>
-</div>
-<a class="w-full bg-sancor-blue text-white py-sm rounded-full font-label-md text-center btn-hover-effect" href="https://wa.me/5493624204266?text=Hola!%20Me%20gustaría%20info%20sobre%20la%20Línea%20GEN" target="_blank">Consultar por WhatsApp</a>
-</div>
-<!-- Línea Exclusive -->
-<div class="bg-surface-container-lowest p-lg rounded-lg shadow-sm hover-lift border border-outline-variant/30 flex flex-col justify-between">
-<div>
-<span class="material-symbols-outlined text-sancor-blue text-[48px] mb-md">military_tech</span>
-<h3 class="font-headline-md text-headline-md text-sancor-blue mb-sm">Línea Exclusive</h3>
-<p class="text-on-surface-variant mb-md font-body-md">Servicios premium y beneficios exclusivos para la máxima tranquilidad.</p>
-<ul class="space-y-base mb-lg font-body-md">
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sancor-light text-sm">check_circle</span> S4500 / S5000 / S6000</li>
-<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sancor-light text-sm">check_circle</span> Cobertura Internacional</li>
-</ul>
-</div>
-<a class="w-full bg-sancor-blue text-white py-sm rounded-full font-label-md text-center btn-hover-effect" href="https://wa.me/5493624204266?text=Hola!%20Me%20gustaría%20info%20sobre%20la%20Línea%20Exclusive" target="_blank">Consultar por WhatsApp</a>
+</a>
 </div>
 </div>
 </section>
-<!-- Contact Section -->
-<section class="py-xl bg-gradient-to-br from-sancor-blue to-sancor-light reveal active" id="contacto">
-<div class="px-gutter max-w-[900px] mx-auto">
-<div class="bg-surface-container-lowest rounded-lg shadow-xl overflow-hidden flex flex-col md:flex-row">
-<div class="p-lg md:w-1/3 bg-sancor-blue text-white flex flex-col justify-center">
-<h3 class="font-headline-md text-headline-md mb-md">Cotizá Online</h3>
-<p class="opacity-80 font-body-md mb-lg">Completá el formulario y un asesor se contactará con vos de manera inmediata vía WhatsApp.</p>
-<div class="space-y-md">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-sancor-light">verified_user</span>
-<span class="text-label-md">Garantía Sancor Salud</span>
-</div>
-</div>
-</div>
-<div class="p-lg md:w-2/3">
-<form class="grid grid-cols-1 sm:grid-cols-2 gap-md" id="quoteForm">
-<div class="sm:col-span-2">
-<label class="block font-label-md text-on-surface mb-xs">Nombre Completo *</label>
-<input class="w-full bg-surface-container-low border-none rounded-md p-3 focus:ring-2 focus:ring-sancor-light font-body-md" id="name" required="" type="text">
-</div>
-<div>
-<label class="block font-label-md text-on-surface mb-xs">WhatsApp (Sin 0 ni 15) *</label>
-<input class="w-full bg-surface-container-low border-none rounded-md p-3 focus:ring-2 focus:ring-sancor-light font-body-md" id="whatsapp_num" placeholder="Ej: 3624123456" required="" type="tel">
-</div>
-<div>
-<label class="block font-label-md text-on-surface mb-xs">Email (Opcional)</label>
-<input class="w-full bg-surface-container-low border-none rounded-md p-3 focus:ring-2 focus:ring-sancor-light font-body-md" id="email" type="email">
-</div>
-<div>
-<label class="block font-label-md text-on-surface mb-xs">Plan de Interés</label>
-<select class="w-full bg-surface-container-low border-none rounded-md p-3 focus:ring-2 focus:ring-sancor-light font-body-md" id="plan">
-<option>Línea ON</option>
-<option>Línea Digital Flex</option>
-<option>Línea FAM</option>
-<option selected="">Línea Clásica (S3000)</option>
-<option>Línea GEN</option>
-<option>Línea Exclusive</option>
-</select>
-</div>
-<div>
-<label class="block font-label-md text-on-surface mb-xs">Personas a Cargo</label>
-<input class="w-full bg-surface-container-low border-none rounded-md p-3 focus:ring-2 focus:ring-sancor-light font-body-md" id="count" min="0" type="number" value="0">
-</div>
-<div class="sm:col-span-2">
-<label class="block font-label-md text-on-surface mb-xs">Provincia</label>
-<input class="w-full bg-surface-container-low border-none rounded-md p-3 focus:ring-2 focus:ring-sancor-light font-body-md" id="province" placeholder="Chaco, Corrientes, etc." type="text">
-</div>
-<div class="sm:col-span-2 mt-sm">
-<button class="w-full bg-sancor-blue text-white font-label-md py-4 rounded-full btn-hover-effect shadow-md" type="submit">
-                                Solicitar Cotización ahora
-                            </button>
-</div>
-</form>
-</div>
+<!-- Contact CTA -->
+<section class="bg-primary py-xl text-white">
+<div class="container mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<h3 class="font-display-lg text-headline-lg md:text-display-lg mb-6">¿Buscando la mejor cobertura?</h3>
+<p class="font-body-lg mb-10 opacity-90 max-w-2xl mx-auto">Nuestros asesores regionales conocen tus necesidades y te ayudarán a encontrar el plan ideal para vos, tu familia o tu empresa.</p>
+<div class="flex justify-center gap-gutter">
+<button class="bg-secondary text-white hover:bg-secondary-container px-10 py-4 rounded-full font-bold text-lg shadow-xl transition-all active:scale-95 flex items-center gap-2">
+<span class="material-symbols-outlined">call</span>
+                        Asesoría Gratuita
+                    </button>
 </div>
 </div>
 </section>
 </main>
 <!-- Footer -->
-<footer class="bg-[#0A1628] text-white pt-xl">
-<div class="w-full py-xl px-gutter flex flex-col md:flex-row justify-between items-start max-w-container-max mx-auto gap-xl">
-<div class="max-w-sm">
-<div class="flex items-center gap-2 mb-md">
-<img alt="Sancor Salud" class="h-12 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiALMDpADqEIBUTXxIrXwLTWVtAlfLWQa7_DZNDJYN5_tCw1dDWBxD-8974ItY2mDq10S1-KMTOxnO_MR3COyx9Vzwjso1WXAsq6NhMLdwqYMjeFcqUWltYoXIRGjVJtoi7MufZZRkWUWxH1NjFNUziac0QNabTSoIjmAuUlblYEOvxJri74dri1I4hu3F5lOjUN14pyKj3rgMe2kYVvP5pJbTnOOX0ymhAj89UgeULjX873qwDoIZvxOA4SRrYOd_6wWvuLE0wwT1">
+<footer class="w-full px-margin-desktop py-lg flex flex-col md:flex-row justify-between items-center gap-md bg-surface-container-highest dark:bg-inverse-surface">
+<div class="flex flex-col items-center md:items-start gap-sm">
+<div class="flex items-center gap-2">
+<img alt="Salud Nea Logo Small" class="h-8 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmq3awAk0tyud16gP25IQy3WRMM4yPkXwI8WhonTglS1g767GAGF_IrdTK41IlzT6vP5a4mWVspl2sK0_kX8Ja9jaNaUZvcriy-1pgQbTBBfnGoBKGMFIy1oFMQOdOH2CJ5N-_2RYo8tk1Z8mk0htC2tS4Z8CuCq9fIFh9SR13NRrJjWNlMG_3q-KjCeMt5Bm0vj3_krvR_Gj31u_CUt95Er-UL2eSnQhjyhlFzCog-H_PsG_bj43gwcmt1T4uo9c3WwsyVTiuACKR">
+<span class="text-headline-md font-headline-md font-bold text-primary">Salud Nea</span>
 </div>
-<p class="font-body-md opacity-70 mb-md">Medicina Prepaga líder en Argentina. Calidad, trayectoria y el respaldo que necesitás para vivir tranquilo.</p>
-<div class="h-[2px] w-20 bg-sancor-light mb-md"></div>
+<p class="text-on-tertiary-fixed-variant dark:text-tertiary-fixed-dim font-body-md text-body-md">
+                © 2024 Salud Nea. Brindando tranquilidad a las familias del NEA.
+            </p>
 </div>
-<div class="grid grid-cols-2 gap-xl">
-<div>
-<h4 class="font-label-md text-sancor-light mb-md uppercase tracking-widest">Secciones</h4>
-<ul class="space-y-sm font-body-md">
-<li class=""><a class="opacity-80 hover:opacity-100 hover:text-sancor-light transition-all" href="#inicio">Inicio</a></li>
-<li class=""><a class="opacity-80 hover:opacity-100 hover:text-sancor-light transition-all" href="#planes">Planes</a></li>
-<li class=""><a class="opacity-80 hover:opacity-100 hover:text-sancor-light transition-all" href="#contacto">Contacto</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-label-md text-sancor-light mb-md uppercase tracking-widest">Contacto</h4>
-<ul class="space-y-sm font-body-md">
-<li class="flex items-center gap-2 opacity-80"><span class="material-symbols-outlined text-[18px]">phone</span> +54 9 3624204266</li>
-<li class="flex items-center gap-2 opacity-80"><span class="material-symbols-outlined text-[18px]">mail</span> damiobre.asesor@gmail.com</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="border-t border-white/10 py-md">
-<div class="max-w-container-max mx-auto px-gutter flex justify-between items-center text-caption opacity-50">
-<span class="">© 2024 Sancor Salud. Todos los derechos reservados.</span>
-<div class="flex gap-md">
-<span class="">Términos y Condiciones</span>
-<span class="">Defensa del Consumidor</span>
-</div>
-</div>
+<div class="flex flex-wrap justify-center gap-md">
+<a class="text-on-tertiary-fixed-variant dark:text-tertiary-fixed-dim font-label-sm text-label-sm hover:underline hover:text-secondary dark:hover:text-secondary-fixed-dim" href="https://saludnea.com.ar/sancorsalud/">Sancor Salud</a>
+<a class="text-on-tertiary-fixed-variant dark:text-tertiary-fixed-dim font-label-sm text-label-sm hover:underline hover:text-secondary dark:hover:text-secondary-fixed-dim" href="https://saludnea.com.ar/prevencion/">Prevención Salud</a>
+<a class="text-on-tertiary-fixed-variant dark:text-tertiary-fixed-dim font-label-sm text-label-sm hover:underline hover:text-secondary dark:hover:text-secondary-fixed-dim" href="https://saludnea.com.ar/avalian/">Avalian</a>
+<a class="text-on-tertiary-fixed-variant dark:text-tertiary-fixed-dim font-label-sm text-label-sm hover:underline hover:text-secondary dark:hover:text-secondary-fixed-dim" href="https://saludnea.com.ar/omint/">Omint</a>
+<a class="text-on-tertiary-fixed-variant dark:text-tertiary-fixed-dim font-label-sm text-label-sm hover:underline hover:text-secondary dark:hover:text-secondary-fixed-dim" href="#">Términos y Condiciones</a>
+<a class="text-on-tertiary-fixed-variant dark:text-tertiary-fixed-dim font-label-sm text-label-sm hover:underline hover:text-secondary dark:hover:text-secondary-fixed-dim" href="#">Privacidad</a>
 </div>
 </footer>
-<!-- Floating Action Button -->
-<a class="fixed right-4 top-1/2 -translate-y-1/2 w-[60px] h-[60px] bg-whatsapp rounded-full flex items-center justify-center text-white shadow-2xl z-[100] wa-pulse hover:scale-110 transition-transform" href="https://wa.me/5493624204266" target="_blank">
-<svg fill="currentColor" height="32" viewBox="0 0 16 16" width="32" xmlns="http://www.w3.org/2000/svg">
-<path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93a7.898 7.898 0 0 0-2.322-5.607L13.601 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"></path>
-</svg>
-</a>
 <script>
-    // Navbar Scroll Effect
-    window.addEventListener('scroll', () => {
-        const nav = document.getElementById('top-nav');
-        if (window.scrollY > 50) {
-            nav.classList.add('py-2', 'shadow-md');
-            nav.classList.remove('h-[80px]');
-        } else {
-            nav.classList.remove('py-2', 'shadow-md');
-            nav.classList.add('h-[80px]');
-        }
-    });
-
-    // Reveal on Scroll
-    const observerOptions = {
-        threshold: 0.15
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
+        // Simple scroll effect for header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-lg');
+                header.classList.add('py-2');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.remove('shadow-lg');
+                header.classList.add('py-4');
+                header.classList.remove('py-2');
             }
         });
-    }, observerOptions);
 
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-    // Form Logic
-    document.getElementById('quoteForm').addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        const name = document.getElementById('name').value;
-        const waNum = document.getElementById('whatsapp_num').value;
-        const email = document.getElementById('email').value || 'No especificado';
-        const plan = document.getElementById('plan').value;
-        const count = document.getElementById('count').value;
-        const province = document.getElementById('province').value;
-
-        const message = `Hola! Me gustaría cotizar un plan.%0A%0A*Datos del solicitante:*%0A- Nombre: ${encodeURIComponent(name)}%0A- WhatsApp: ${encodeURIComponent(waNum)}%0A- Email: ${encodeURIComponent(email)}%0A- Plan: ${encodeURIComponent(plan)}%0A- Personas: ${encodeURIComponent(count)}%0A- Provincia: ${encodeURIComponent(province)}`;
-        
-        const waUrl = `https://wa.me/5493624204266?text=${message}`;
-        
-        window.open(waUrl, '_blank');
-    });
-</script>
+        // Hover animation for partner cards
+        const cards = document.querySelectorAll('.partner-card');
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-12px)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
 
 
 </body></html>
