@@ -2,9 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://saludnea.com.ar/</loc>
+    <loc>https://saludnea.com.ar</loc>
   </url>
-  
+
+    <url>
+    <loc>https://saludnea.com.ar/omint</loc>
+  </url>
   <url>
     <loc>https://saludnea.com.ar/prevencion</loc>
   </url>
